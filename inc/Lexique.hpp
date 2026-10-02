@@ -2,12 +2,13 @@
 #include <map>
 #include <string>
 
+using LexiqueType = std::map<std::string, unsigned int>;
 
 
 class Lexique
 {
 private:
-    std::map<std::string, unsigned int> lexique_;
+    LexiqueType lexique_;
     std::string nom_;
     
 public:
@@ -16,8 +17,9 @@ public:
 
 
     void exportTxt();
-    void deleteWord(std::string w);
-    void displavoidyNbWord();
+
+    int deleteWord(const std::string& w);
+    void displayNbWord();
 
     int  nbOfOccurrences(std::string w);
 

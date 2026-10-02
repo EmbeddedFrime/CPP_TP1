@@ -1,7 +1,6 @@
 #include "../inc/Lexique.hpp"
 using namespace std;
 
-
 Lexique::Lexique()
 {
     
@@ -17,11 +16,12 @@ void Lexique::exportTxt()
 
 }
 
-void Lexique::deleteWord(string w)
+int Lexique::deleteWord(const string& w)
 {
-
+    return lexique_.erase(w);
 }
-void Lexique::displavoidyNbWord()
+
+void Lexique::displayNbWord()
 {
 
 }
